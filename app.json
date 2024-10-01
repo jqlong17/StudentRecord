@@ -1,0 +1,8 @@
+{
+  "pages": [
+    "pages/student-record/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "我的小程序"
+  }
+}
