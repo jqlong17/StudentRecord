@@ -1,4 +1,5 @@
 ## 目录结构
+```
 miniprogram-1
 ├── README.md
 ├── app.js
@@ -14,3 +15,4 @@ miniprogram-1
 │           └── index.wxss
 ├── project.config.json
 └── uploadCloudFunction.sh
+```
