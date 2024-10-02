@@ -1,0 +1,65 @@
+.button-container {
+  display: flex; /* 使用 flexbox 布局 */
+  justify-content: space-between; /* 在按钮之间留出空间 */
+  margin-bottom: 10px; /* 添加底部间距 */
+}
+
+.scroll-view {
+  overflow-x: auto; /* 允许横向滚动 */
+  white-space: nowrap; /* 防止内容换行 */
+}
+
+button {
+  font-size: 16px; /* 设置按钮字体大小 */
+  padding: 10px; /* 添加内边距 */
+  background-color: #007aff; /* 按钮背景色 */
+  color: #fff; /* 按钮文字颜色 */
+  border: none; /* 去掉边框 */
+  border-radius: 5px; /* 圆角 */
+}
+
+.delete-confirm {
+  background-color: #ff4d4f; /* 红色背景 */
+}
+
+.table {
+  width: 100%; /* 确保表格宽度为100% */
+  border-collapse: collapse; /* 合并边框 */
+}
+
+.table-header {
+  background-color: #000; /* 表头背景色 */
+  color: #fff; /* 表头文字颜色 */
+  display: flex; /* 使用 flexbox 布局 */
+  padding: 10px; /* 内边距 */
+  font-size: 18px; /* 表头字体大小 */
+}
+
+.table-header text {
+  flex: 1; /* 平均分配宽度 */
+  text-align: center; /* 文字居中 */
+}
+
+.table-row {
+  display: flex; /* 使用 flexbox 布局 */
+  padding: 10px; /* 内边距 */
+  border-bottom: 1px solid #ccc; /* 行底部边框 */
+  font-size: 16px; /* 行字体大小 */
+}
+
+.table-row text {
+  flex: 1; /* 平均分配宽度 */
+  text-align: center; /* 文字居中 */
+}
+
+input {
+  margin: 5px;
+  width: 100px; /* 设置输入框宽度 */
+  font-size: 16px; /* 输入框字体大小 */
+  padding: 5px; /* 添加内边距 */
+}
+
+picker {
+  margin: 5px;
+  font-size: 16px; /* 下拉框字体大小 */
+}

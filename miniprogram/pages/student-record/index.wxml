@@ -1,0 +1,38 @@
+<!--miniprogram/pages/student-record/index.wxml-->
+<text>miniprogram/pages/student-record/index.wxml</text>
+
+<view>
+  <view class="button-container">
+    <button bindtap="addStudent">增加行</button>
+    <button bindtap="deleteSelectedStudents">删除行</button>
+    <button bindtap="addDate">增加日期</button>
+    <button bindtap="{{isDeletingDates ? 'deleteSelectedDates' : 'toggleDeleteDatesMode'}}" class="{{isDeletingDates ? 'delete-confirm' : ''}}">
+      {{isDeletingDates ? '确认删除' : '删除日期'}}
+    </button>
+    <button bindtap="settings">设置</button>
+  </view>
+
+  <scroll-view scroll-x="true" class="scroll-view">
+    <view class="table">
+      <view class="table-header">
+        <text>序号</text>
+        <text>学生姓名</text>
+        <view wx:for="{{dates}}" wx:key="index" class="date-column" bindtap="toggleDateSelection" data-index="{{index}}" style="background-color: {{item.selected ? '#d3d3d3' : 'transparent'}};">
+          <view bindtap="editDate" data-index="{{index}}">
+            <text>{{item.date || '新日期'}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:for="{{students}}" wx:key="index" class="table-row" bindtap="toggleStudentSelection" data-index="{{index}}" style="background-color: {{item.selected ? '#d3d3d3' : 'transparent'}};">
+        <text>{{index + 1}}</text>
+        <input value="{{item.name}}" bindinput="editStudentName" data-index="{{index}}" placeholder="学生姓名" />
+        <view wx:for="{{dates}}" wx:for-item="date" wx:for-index="dateIndex" wx:key="dateIndex">
+          <picker bindchange="editStatus" data-student-index="{{index}}" data-date-index="{{dateIndex}}">
+            <view>{{item.status[dateIndex] || '未交'}}</view>
+          </picker>
+          <input wx:if="{{item.status[dateIndex] === '数字'}}" value="{{item.scores[dateIndex]}}" bindinput="editScore" data-student-index="{{index}}" data-date-index="{{dateIndex}}" placeholder="成绩" />
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
