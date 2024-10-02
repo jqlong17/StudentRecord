@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/student-record/index"
+    "miniprogram/pages/student-record/index"
   ],
   "window": {
-    "navigationBarTitleText": "我的小程序"
+    "navigationBarTitleText": "学生记录"
   }
 }
