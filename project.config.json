@@ -37,7 +37,8 @@
     "minifyWXSS": true
   },
   "appid": "wx73c1a00375428579",
-  "projectname": "quickstart-wx-cloud",
+  "projectname": "StudentRecord",
+  "description": "学情记录小程序",
   "libVersion": "latest",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
